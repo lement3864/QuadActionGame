@@ -22,6 +22,31 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1101 &-6580917484087424238
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: doSwing
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -706832952838350584}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &-6564800523739358617
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -149,6 +174,28 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1101 &-2944735744564928055
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 0}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 1
+  serializedVersion: 3
+  m_TransitionDuration: 0.1
+  m_TransitionOffset: 0
+  m_ExitTime: 0.6875
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &-1606874841358679827
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -174,6 +221,33 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &-706832952838350584
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Swing
+  m_Speed: 1.5
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: -2944735744564928055}
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 8092736937394372646, guid: cae3f9537776dea41855a724b56dd2c9, type: 3}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1107 &-607582532862903027
 AnimatorStateMachine:
   serializedVersion: 6
@@ -197,24 +271,28 @@ AnimatorStateMachine:
     m_Position: {x: 0, y: 480, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5722609563423749807}
-    m_Position: {x: 300, y: 530, z: 0}
+    m_Position: {x: 200, y: 530, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5487889684085960478}
     m_Position: {x: 0, y: 580, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -529022933955058103}
+    m_Position: {x: 400, y: 530, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -706832952838350584}
     m_Position: {x: 600, y: 530, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 6569142517118614519}
   - {fileID: 1432278930248766691}
   - {fileID: 4871895812113817928}
+  - {fileID: -6580917484087424238}
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 320, y: 400, z: 0}
+  m_AnyStatePosition: {x: 220, y: 400, z: 0}
   m_EntryPosition: {x: 50, y: 60, z: 0}
-  m_ExitPosition: {x: 320, y: 670, z: 0}
+  m_ExitPosition: {x: 220, y: 670, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -334687715033061810}
 --- !u!1102 &-529022933955058103
@@ -312,6 +390,12 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: doSwap
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: doSwing
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
